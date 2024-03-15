@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список продуктів</title>
+</head>
+<body>
+    <h2>
+        Продукти
+    </h2>
+    <ul>
+        {% for product in products_list %}
+
+        <li>
+            {{ product.name }} - {{ product.price }} -
+        <a href="{% url 'product_details' product.id%}" target="_blank"> Детальніше </a>
+        </li>
+
+        {% endfor %}
+    </ul>
+</body>
+</html>
